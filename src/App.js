@@ -1,23 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import './css/App.css';
+import Home from './pages/Home';
+import About from './pages/About'
+import Weather from './pages/Weather'
+import * as React from "react";
+import * as ReactDOM from "react-dom";
+import {
+  Routes,
+  Route,
+} from "react-router-dom";
+import {useTheme} from './context/ThemeContext'
+import Login from './pages/Login';
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  const {theme} = useTheme();
+  return ( 
+    <div className='' style={theme==='light'? {backgroundColor: '#D2D79F'} : {backgroundColor: '#483838'}}>
+      <div className="App container">
+
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/weather" element={<Weather />} />
+          <Route path="/login" element={<Login />} />
+
+
+        </Routes>
+
+
+      </div>
     </div>
   );
 }

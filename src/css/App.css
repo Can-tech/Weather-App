@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&family=Source+Sans+Pro:wght@400&display=swap');
+.App {
+  text-align: center;
+}
+.nav-link::before,
+.nav-link::after{
+  border-radius: 50%;
+  background-color: #90B77D;
+}
+
+.nav-link, .head{
+
+	border-top-left-radius: 25px;
+	border-top-right-radius: 25px;
+  padding-bottom: 0.9em;
+  padding-bottom: 0.9em;
+
+
+
+}
+.headtextlight{
+  font-size:x-large;
+  font-family: 'Quicksand', sans-serif;
+  color: rgb(255, 255, 255);
+}
+.headtextdark{
+  font-size:x-large;
+  font-family: 'Quicksand', sans-serif;
+  color: rgb(0, 0, 0);
+}
+.textlight{
+  font-family: 'Source Sans Pro', sans-serif;
+  color: rgb(255, 255, 255);
+  font-size: large;
+}
+.textdark{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: large;
+
+  color: rgb(0, 0, 0);
+}
+.nav-link:hover{
+  background-color: #ffffff;
+  color: #90B77D;
+}
+.list-footer-element-light{
+  padding: .5em;
+  color: #ffffff;
+}
+.list-footer-element-light:hover{
+  background-color: #ffffff;
+  color: #90B77D;
+
+}
+.list-footer-element-dark{
+  padding: .5em;
+  color: #000000;
+}
+.list-footer-element-dark:hover{
+  text-decoration: underline;
+  text-decoration-color: #000000;
+  color: #000000;
+
+}
+.lightelement{
+  background-color: #90B77D;
+}
+.darkelement{
+  background-color: #42855B;
+}
+.white{
+  color: white;
+}
+.black{
+  color: #000000;
+}
+.footer-corner{
+  border-top-left-radius: 28px;
+  border-top-right-radius: 28px;
+}

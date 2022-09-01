@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&family=Source+Sans+Pro:wght@400&display=swap');
+.cards-main{
+  display:flex;
+
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+  height:70vh;
+  font-family: 'Roboto', sans-serif;
+  transition: .5s cubic-bezier(0.05, 0.61, 0.41, 0.95);;
+  margin-top: 1.5em;
+ 
+}
+
+.cards {
+  display: flex;
+  max-width: 1000px;
+  width: calc(100% - 100px);
+  height: 400px;
+
+}
+
+.cards .card .info .title {
+  font-weight: bold;
+  font-size: 4.2rem;
+}
+.cards .card .info .title::after {
+  content: "\00b0";
+}
+
+
+
+
+.cards .card .label .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 40px;
+  height: 110px;
+  background-color: white;
+  border-radius: 20px;
+  font-family: 'Quicksand', sans-serif;
+}
+.cards .card.activec .label .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 50px;
+  height: 80px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.cards .card .label .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10px;
+  white-space: pre;
+  transition: .5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+}
+
+.cards .card {
+  position: relative;
+  min-width: 60px;
+  overflow: hidden;
+  margin: 5px;
+  background-size: auto 100%;
+  background-position: center;
+  cursor: pointer;
+  transition: 1.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);;
+  border-radius: 30px;
+}
+
+.cards .card .label {
+  display: flex;
+  position: absolute;
+  height: 90px;
+  transition: .5s cubic-bezier(0.05, 0.61, 0.41, 0.95);;
+  
+}
+
+.cards .card.activec .label {
+  bottom: 230px;
+  left: 30px;
+  
+
+  
+
+}
+
+.cards .card.activec {
+  flex-grow: 10000;
+  background-size: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cards .card:not(.activec) .label {
+  bottom: 20px;
+  left: 10px;
+}
+
+
+.cards .card .shadow {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(
+    0, rgba(0, 255, 60, 0.267), transparent
+  );
+}
+
+.cards .card.activec .info {
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  left: 80px;
+  padding: 8em;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  
+  
+}
+.cards .card .label .vertictxt{
+  writing-mode: vertical-rl;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cards .card.activec .label .vertictxt{
+  writing-mode:initial
+}
+
+.cards .card:not(.activec) .info {
+  opacity: 0;
+}
+.today{
+  font-family: 'Quicksand', sans-serif;
+}
