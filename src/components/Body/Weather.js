@@ -5,7 +5,10 @@ import { useTheme } from '../../context/ThemeContext'
 import CityList from '../../turkeyCityList/tr.json'
 import flagimg from '../../images/flag.jpg'
 
+
 function Weather() {
+    const WEATHER_PASS = process.env.REACT_APP_WEATHER_PASS;
+
     const { selectedCity, setSelectedCity, weather, setWeather, days} = useWeather();
     const { theme } = useTheme();
     const BASE_URL = "https://api.openweathermap.org/data/2.5/forecast";
@@ -24,7 +27,7 @@ function Weather() {
         }
     }
     useEffect(()=>{
-        fetch(`${BASE_URL}?lat=${(CityList.find((e)=>e.name===selectedCity.name)).latitude}&lon=${CityList.find(((e)=>e.name===selectedCity.name)).longitude}&units=metric&appid=21b6d7f12b94f6db6e3e520f858a9a51`)
+        fetch(`${BASE_URL}?lat=${(CityList.find((e)=>e.name===selectedCity.name)).latitude}&lon=${CityList.find(((e)=>e.name===selectedCity.name)).longitude}&units=metric&appid=${WEATHER_PASS}`)
         .then(data=>data.json())
         .then(data=>{setWeather(data.list)})
         
@@ -35,7 +38,9 @@ function Weather() {
 
 
     return (
-        <div className={theme === 'light' ? 'lightelement rounded-5' : 'darkelement rounded-5'} >
+        <div className={theme === 'light' ? 'lightelement rounded-5 mt-3 p-4' : 'darkelement rounded-5 mt-3 p-4'} >
+            <h3 className={`fs-2 ${theme==='light' ? 'headtextlight' : 'headtextdark'}`}>Weather</h3>
+            <hr className={`${theme === 'light' ? 'white' : 'dark'} `}/>
 
             <div className="cards-main row " >
 
@@ -81,7 +86,7 @@ function Weather() {
                                 </div>
                                 <div className='title'> {Math.ceil(e.main.temp)}</div>
                                 
-                                <div className='today'>{days[new Date(e.dt * 1000).getDay()]}</div>
+                                <div className='today fs-5'>{days[new Date(e.dt * 1000).getDay()]}</div>
                             </div>
                         </div>
                     </div>)

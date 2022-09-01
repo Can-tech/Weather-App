@@ -12,7 +12,7 @@ import CitiesData from '../turkeyCityList/tr.json'
         const [weather, setWeather] = useState([]);
 
         const daysShort = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-        const days = ['Pazar', 'Pazartesi', 'Salı', 'Çarşamba', 'Perşambe', 'Cuma', 'Cumaertesi'];
+        const days = ['Pazar', 'Pazartesi', 'Salı', 'Çarşamba', 'Perşambe', 'Cuma', 'Cumartesi'];
 
         const values = {
             selectedCity,

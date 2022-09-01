@@ -3,21 +3,26 @@
 .App {
   text-align: center;
 }
-.nav-link::before,
-.nav-link::after{
-  border-radius: 50%;
-  background-color: #90B77D;
-}
 
 .nav-link, .head{
 
 	border-top-left-radius: 25px;
 	border-top-right-radius: 25px;
   padding-bottom: 0.9em;
-  padding-bottom: 0.9em;
 
 
+}
+.nav-link:hover{
+  background-color: #D2D79F;
+  color: #ffffff;
 
+  
+}
+@media (max-width: 1000px) {
+  .nav-link, .head{
+    border-radius: 15px;
+    padding-bottom: 0;
+  }
 }
 .headtextlight{
   font-size:x-large;
@@ -40,10 +45,7 @@
 
   color: rgb(0, 0, 0);
 }
-.nav-link:hover{
-  background-color: #ffffff;
-  color: #90B77D;
-}
+
 .list-footer-element-light{
   padding: .5em;
   color: #ffffff;
@@ -63,6 +65,7 @@
   color: #000000;
 
 }
+
 .lightelement{
   background-color: #90B77D;
 }

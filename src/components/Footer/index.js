@@ -20,6 +20,7 @@ function Footer() {
                             <ul className="list-unstyled small mt-3">
                                 <li className="mb-2 ">"My weather app" is powered by React. <br /> Made for the homework in the <br /> Patika.dev React path.</li>
                                 <li className="mb-2">Code licensed MIT</li>
+                                <li><a href='https://github.com/Can-tech ' className='text-dark'>Project Github page</a></li>
                             </ul>
                         </div>
                         <div className={`col-6 col-lg-5 offset-lg-1 text-start ${theme==='light' ? 'white' : 'black'}`}>
